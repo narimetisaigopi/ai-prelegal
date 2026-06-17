@@ -1,0 +1,202 @@
+:root {
+  --accent-yellow: #ecad0a;
+  --blue-primary: #209dd7;
+  --purple-secondary: #753991;
+  --dark-navy: #032147;
+  --gray-text: #888888;
+  --card: #fdfcf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Sora", sans-serif;
+  color: var(--dark-navy);
+  background: radial-gradient(circle at 10% 20%, #fff5d4 0%, #f2f7ff 45%, #eef1ff 100%);
+}
+
+.page {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.hero {
+  margin: 0 auto 1.5rem;
+  max-width: 1200px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.hero p {
+  margin: 0.4rem 0 0;
+  color: var(--gray-text);
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.card {
+  border: 1px solid #e5e7ef;
+  border-radius: 18px;
+  padding: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--card) 100%);
+  box-shadow: 0 12px 30px rgba(3, 33, 71, 0.07);
+}
+
+.auth {
+  grid-column: span 3;
+}
+
+.chat {
+  grid-column: span 6;
+}
+
+.docs {
+  grid-column: span 3;
+}
+
+label {
+  display: block;
+  margin: 0.6rem 0 0.2rem;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+button,
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d2d6e4;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+button {
+  background: var(--purple-secondary);
+  color: white;
+  border: none;
+  margin-top: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--dark-navy);
+  border: 1px solid #ccd2e5;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.chatlog {
+  border: 1px solid #e4e8f5;
+  border-radius: 14px;
+  min-height: 340px;
+  max-height: 420px;
+  overflow: auto;
+  padding: 0.8rem;
+  background: #fff;
+}
+
+.chatlog p {
+  margin: 0.3rem 0;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+}
+
+.chatlog p.user {
+  background: #e4f6ff;
+}
+
+.chatlog p.assistant {
+  background: #fff7e1;
+}
+
+.chatform {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.chatform button {
+  width: auto;
+  padding: 0 1.2rem;
+}
+
+.docs ul {
+  padding: 0;
+  list-style: none;
+}
+
+.docs li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #d8deed;
+}
+
+.docs li span {
+  font-size: 0.9rem;
+}
+
+.docs li div {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.docs li button {
+  margin-top: 0;
+  width: auto;
+  padding: 0.35rem 0.55rem;
+}
+
+pre {
+  background: #0d1f39;
+  color: #dff0ff;
+  border-radius: 12px;
+  padding: 0.8rem;
+  overflow: auto;
+  font-size: 0.78rem;
+}
+
+.error {
+  color: #af1f2d;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 980px) {
+  .auth,
+  .chat,
+  .docs {
+    grid-column: span 12;
+  }
+
+  .page {
+    padding: 1rem;
+  }
+}

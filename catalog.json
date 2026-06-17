@@ -1,0 +1,15 @@
+{
+  "documents": [
+    { "id": "mutual-nda", "name": "Mutual NDA" },
+    { "id": "cloud-service-agreement", "name": "Cloud Service Agreement" },
+    { "id": "pilot-agreement", "name": "Pilot Agreement" },
+    { "id": "design-partner-agreement", "name": "Design Partner Agreement" },
+    { "id": "sla", "name": "SLA" },
+    { "id": "professional-services-agreement", "name": "Professional Services Agreement" },
+    { "id": "partnership-agreement", "name": "Partnership Agreement" },
+    { "id": "software-license-agreement", "name": "Software License Agreement" },
+    { "id": "dpa", "name": "DPA" },
+    { "id": "baa", "name": "BAA" },
+    { "id": "ai-addendum", "name": "AI Addendum" }
+  ]
+}

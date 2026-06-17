@@ -1,0 +1,13 @@
+services:
+  prelegal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+      - JWT_SECRET=${JWT_SECRET:-change-this-secret}
+      - JWT_EXPIRE_MINUTES=${JWT_EXPIRE_MINUTES:-1440}
+      - LITELLM_MODEL=${LITELLM_MODEL:-openrouter/openai/gpt-oss-120b}
+      - LITELLM_PROVIDER=${LITELLM_PROVIDER:-cerebras}
