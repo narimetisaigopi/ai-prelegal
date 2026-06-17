@@ -7,7 +7,7 @@ from passlib.context import CryptContext
 from .config import JWT_ALGORITHM, JWT_EXPIRE_MINUTES, JWT_SECRET
 from .db import get_user_by_id
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 COOKIE_NAME = "prelegal_token"
 
 
